@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Blackjack"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="BlackJack" Height="800" Width="500">
+    <StackPanel>
+
+        <Label Content="BlackJack" HorizontalAlignment="Center" FontSize="48"/>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Game Mode: " HorizontalAlignment="Right" Grid.Column="0"/>
+            <ListBox x:Name="ModeList" Grid.Column="1" HorizontalAlignment="Center">
+                <ListBoxItem Content="AI Teaches Itself"/>
+            </ListBox>
+
+        </Grid>
         
-    </Grid>
+    </StackPanel>
 </Window>
