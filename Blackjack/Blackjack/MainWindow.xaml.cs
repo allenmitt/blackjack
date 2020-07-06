@@ -24,5 +24,10 @@ namespace Blackjack
         {
             InitializeComponent();
         }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            Session session = new Session(0, 4, 9, 1);
+        }
     }
 }

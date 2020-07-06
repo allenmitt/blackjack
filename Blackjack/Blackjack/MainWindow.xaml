@@ -28,6 +28,8 @@
             </ListBox>
 
         </Grid>
-        
+
+        <Button x:Name="StartButton" Content="Start Game" Click="StartButton_Click"/>
+
     </StackPanel>
 </Window>
