@@ -23,13 +23,6 @@ namespace Blackjack
                     Cards.Add(new Card(number, suit));                    
                 }
             }
-            /* Console Debug Logging
-            foreach (Card card in this.Cards)
-            {
-                Console.WriteLine($"{card.mCardNumber.ToString()} of {card.mSuit.ToString()}");
-            }
-            Console.ReadLine();
-            */
         }
     }
 
@@ -89,7 +82,7 @@ namespace Blackjack
     /// Defines face cards so they can all be easily assigned the same value during evaluations
     /// </summary>
     public enum FaceCards
-    {
+    {        
         Jack,
         Queen,
         King

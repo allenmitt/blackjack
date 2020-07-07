@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="DecisionHistory.cs" />
     <Compile Include="Deck.cs" />
+    <Compile Include="Hand.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="SessionEnums.cs" />

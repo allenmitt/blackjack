@@ -45,13 +45,6 @@ namespace Blackjack
 
             // Shuffles all cards in the shoe (multiple decks)
             this.Cards = Shuffle(this.Cards);
-
-            //Console Debug Logging
-            //foreach (Card card in this.Cards)
-            //{
-            //    Console.WriteLine($"{card.mCardNumber.ToString()} of {card.mSuit.ToString()}s");
-            //}
-            //Console.ReadLine();
         }
         #endregion
 

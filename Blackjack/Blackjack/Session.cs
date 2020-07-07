@@ -13,16 +13,23 @@ namespace Blackjack
     public class Session
     {
         #region Private Properties
+        // 0 = AI, 1 = New Player game, 2 = continue player game
         public byte mGameMode { get; private set; }
 
+        // Number of decks per shoe
         private int mNumDecks { get; set; }
 
+        // several boolean game variations stored in a single byte
         private byte mBoolRules { get; set; }
 
+        // 0 = 2:1, 1 = 3:2, 2 = 6:5
         private byte mPayout { get; set; }
 
-        private Shoe mShoe { get; set; }
+        // Shoe object. Only one created per session and reshuffled
+        private Shoe mShoe { get; set; }            
 
+        // Player object. Tracks AI and/or human players' decision history
+        // and various other attributes
         private Player mPlayer { get; set; }
         #endregion
 
@@ -44,13 +51,6 @@ namespace Blackjack
 
             CreateShoe();
 
-            //foreach (Card card in mShoe.Cards)
-            //{
-            //    Console.WriteLine($"{card.mCardNumber.ToString()} of {card.mSuit.ToString()}s");
-            //}
-
-            //Console.ReadLine();
-
             CreatePlayer(this);
         }
         #endregion
@@ -62,8 +62,7 @@ namespace Blackjack
         }
         #endregion
 
-        #region Private members
-
+        #region Private Members
         /// <summary>
         /// Generates a new shoe to be used during the session
         /// </summary>
@@ -74,6 +73,11 @@ namespace Blackjack
             return this.mShoe;
         }
 
+        /// <summary>
+        /// Instantiates player object. Can be an AI or human player
+        /// </summary>
+        /// <param name="session">The session creating the player. Always use 'this'</param>
+        /// <returns>Instantiated Player object</returns>
         private Player CreatePlayer(Session session)
         {
             this.mPlayer = new Player(session);

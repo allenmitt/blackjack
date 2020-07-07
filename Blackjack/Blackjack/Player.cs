@@ -9,11 +9,16 @@ namespace Blackjack
     class Player
     {
         #region Public Properties
-        public int Money { get; set; } //Stores a signed integer indicated money won/lost
+        //Stores a signed integer indicated money won/lost
+        public int Money { get; set; }
 
-        public int BetAmount { get; set; } //Integer indicating amount of bet placed each hand
+        //Integer indicating amount of bet placed each hand
+        public int BetAmount { get; set; }
+        #endregion
 
-        private DecisionHistory mDecisions { get; set; } //Complex dictionary logging past decisions
+        #region Private Properties
+        //Dictionary logging past decisions
+        private Dictionary<string, DecisionHistory> mDecisions { get; set; }
         #endregion
 
         #region .ctor
@@ -22,12 +27,11 @@ namespace Blackjack
             switch (session.mGameMode)
             {
                 case 0:     // Player is AI
-
-                    break;
-                case 1:
-                    break; //Not implemented yet
-                case 2:
-                    break; //Not implemented yet
+                    break;  
+                case 1:     // Player is human and starting a new session
+                    break;  // Not implemented yet
+                case 2:     // Player is human and resuming a saved session
+                    break;  // Not implemented yet
                 default:
                     throw new NotImplementedException();                    
             }
@@ -35,7 +39,12 @@ namespace Blackjack
         #endregion
 
         #region Public Methods
-        public void MakeDecision()
+        public void AIMakeDecision()
+        {
+
+        }
+
+        public void HumanMakeDecision()
         {
 
         }
