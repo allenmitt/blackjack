@@ -42,7 +42,7 @@ namespace Blackjack
                     }
                     else
                     {
-                        value += AceCard(playerHand, value, soft);  
+                        value += AceCard(playerHand, value, ref soft);  
                     }
 
                 }
@@ -50,7 +50,7 @@ namespace Blackjack
             
         }
 
-        private int AceCard(List<Card> playerHand, int value, bool soft)
+        private int AceCard(List<Card> playerHand, int value, ref bool soft)
         { 
             foreach (Card card in playerHand)
             {
