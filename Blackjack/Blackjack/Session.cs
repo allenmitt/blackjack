@@ -58,7 +58,8 @@ namespace Blackjack
         #region Public Methods
         public List<Card> PlayHand()
         {
-            throw new NotImplementedException();
+            Hand hand = new Hand(mShoe, mPlayer);
+
         }
         #endregion
 

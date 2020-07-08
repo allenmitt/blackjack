@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blackjack
 {
-    class Player
+    public class Player
     {
         #region Public Properties
         //Stores a signed integer indicated money won/lost

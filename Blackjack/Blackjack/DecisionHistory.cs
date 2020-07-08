@@ -8,19 +8,19 @@ namespace Blackjack
 {    
     class DecisionHistory
     {
-        private Dictionary<Hand, float> hit;
+        private Dictionary<string, float> hit;
 
-        private Dictionary<Hand, float> stand;
+        private Dictionary<string, float> stand;
 
-        private Dictionary<Hand, float> doubleDown;
+        private Dictionary<string, float> doubleDown;
 
-        private Dictionary<Hand, float> split;
+        private Dictionary<string, float> split;
 
-        private Dictionary<Hand, float> surrender;
+        private Dictionary<string, float> surrender;
 
-        private Dictionary<Hand, float> takeInsurance;
+        private Dictionary<string, float> takeInsurance;
 
-        private Dictionary<Hand, float> takeEvenMoney;
+        private Dictionary<string, float> takeEvenMoney;
 
 
     }
